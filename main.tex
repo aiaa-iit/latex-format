@@ -1,0 +1,95 @@
+\documentclass[report]{dbf}
+\AfterPreamble{\hypersetup{
+  pdfauthor={Mikel Woo; Eyob Ghebreiesus},
+  pdfproducer = {https://aiaa.iit.edu},
+  pdfcreator = {AIAA-IIT Design Build Fly},
+  pdftitle={AIAA-IIT Documentation Format},
+  pdfsubject={Design Build Fly} }}
+\begin{document}
+% \maketitle
+%%%%%% try not to change the settings above %%%%%%
+
+%Comment these two if you don't  want the subsubsections to show up in contents
+\setcounter{tocdepth}{3}  
+\setcounter{secnumdepth}{3}
+
+\pagenumbering{gobble}
+\setlogo{logo_header} %left header as logo
+\rhead{\year ~ Subteam Here} %type  Aerdodynamics Team if the team is responsible for this report
+% \setyear{DBF-2022} %uncomment if you want to enter year in the header
+\newpage
+\begin{center}
+\textbf{\color{white}TOP SECRET}\\[.2in]
+\Large\textsc{\href{https://aiaa.iit.edu}{AIAA-IIT Documentation Template}} %set your document title e.g 2. XFLR5 Airfoil Analysis
+
+\vspace{2.2cm}
+\end{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{Images/center_logo.png}\\[.3in]
+%\HRule
+% \caption*{\small{$^1$Eyob Ghebreiesus}}
+\end{figure}
+\begin{center}
+\large{\href{https://www.iit.edu}{ILLINOIS INSTITUTE OF TECHNOLOGY}}\\
+\small{\href{https://www.iit.edu/er}{ARMOUR COLLEGE OF ENGINEERING}}\\
+\small{\href{https://sites.google.com/iit.edu/aiaaiit/dbf}{AIAA-IIT DESIGN BUILD FLY}}\\[.5in]
+
+Subteam Here \\ %enter your subteam name here. for example Structures Team
+\textit{August $25^{th}, 2022$}\\ %set written date
+\end{center}
+
+\newpage
+%%%%%%
+\newpage
+\begin{center}
+    \textbf{\color{white}TOP SECRET}\\[0.8in]
+    \large Authors\\[.1in]
+    \small{$^1$}\href{mailto:eghebreiesus@hawk.iit.edu}{Mikel Woo}. %Full name of author 
+    \small{$^2$}\href{mailto:mwoo1@hawk.iit.edu}{Eyob Ghebreiesus}. %add author and email. Delete if it's one author.
+    \vspace{.2in}\\
+    \small{$^1$ M.Eng. Aerospace Engineering. DBF Project Manager and Alum Advisor 2016-2020 \\
+    $^2$ M.Eng. Aerospace Engineering. DBF Chief Engineer and Project Manager 2019-2023}   \\[1in]
+\end{center}
+Homepage: \textit{\href{https://aiaa.iit.edu}{https://aiaa.iit.edu}} \\
+Contact: \href{mailto:aiaa@iit.edu}{aiaa@iit.edu}\\
+Published on: \textit{September $12^{th}, 2022$}\\[.2in] %set published date
+Copyright © 2022\\
+All rights reserved. This documentation or any portion thereof may not be reproduced or used in any manner whatsoever without the express written permission of the publisher except for the use of referencing for educational purposes.\\
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the document.\\[.2in]
+Produced via LaTeX, Inc U.S.A.\\
+MIT License for the GitHub Project, 2022\\
+\href{https://github.com/aiaa-iit}{\textit{Visit aiaa@iit Github for more}}\\
+\begin{center}
+\href{https://www.iit.edu/mmae}{Department of Mechanical, Materials and Aerospace Engineering}\\
+\href{https://www.iit.edu}{ILLINOIS INSTITUTE OF TECHNOLOGY}\\
+\end{center}
+\newpage
+\hypersetup{linkcolor=black}
+\tableofcontents
+\newpage
+% \textbf{Abbreviations, Acronyms, and Symbols}\\
+\input{Abbreviations}
+
+\pagenumbering{arabic}
+\section{Introduction}\label{s:in} %enter your section name files as it is and label it properly for tagging later
+    \input{Sections/Introduction.tex}
+    
+\section{Section One [Rename it]}\label{s:so}
+    \input{Sections/Section One.tex} %another section or body
+    
+\section{Section Two [Rename it]}\label{s:st}
+    \input{Sections/Section Two.tex} %another section 
+% \newpage
+\addcontentsline{toc}{section}{List of Figures} %add List of Figures to contents page
+\listoffigures %this will generate us figures automatically
+\addcontentsline{toc}{section}{List of Tables} %add List of Tables to contents page
+\listoftables %this will generate us tables automatically
+
+% \addcontentsline{toc}{section}{List of Equations}
+% \newcommand{\listequationsname}{List of Equations}
+% \listofmyequations
+
+\addcontentsline{toc}{section}{References} %references if any
+\printbibliography %if any
+\end{document}
